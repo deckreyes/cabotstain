@@ -11,7 +11,7 @@ console.log(urlParams.getAll('related-items'))
     
     console.log(data);
 
-    const name = data[0]['name'];
+    const product_name = data[0]['name'];
    
     // Display title
     document.getElementById('result-here').textContent = 'Results' ;
@@ -19,7 +19,7 @@ console.log(urlParams.getAll('related-items'))
 
 
     //Display the last trade date
-    document.getElementById('product-name').textContent = name;
+    document.getElementById('product-name').textContent = product_name;
 
   })
   .catch(error => {
