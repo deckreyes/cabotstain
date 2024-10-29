@@ -22,7 +22,8 @@ console.log(urlParams.getAll('related-items'))
 
     for (var i=0; i < response.total; i++){
 
-        console.log(response.data[i].name)
+        //console.log(response.data[i].name)
+        document.getElementById('product-name').textContent = response.data[i].name
     }
     
 
