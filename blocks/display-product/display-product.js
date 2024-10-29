@@ -9,15 +9,15 @@ console.log(urlParams.getAll('related-items'))
   .then(response => response.json())
   .then(data => {
     
-    //const tradeDate = data['Global Quote']['07. latest trading day'];
+    const name = data[0].name;
    
     // Display title
     document.getElementById('result-here').textContent = 'Results' ;
 
     console.log(data);
 
-    // Display the last trade date
-    //document.getElementById('trade-date').textContent = 'Trade Date: ' + tradeDate;
+    //Display the last trade date
+    document.getElementById('product-name').textContent = name;
 
   })
   .catch(error => {
