@@ -22,7 +22,7 @@ console.log(urlParams.getAll('related-items'))
 
     for (var i=0; i < response.total; i++){
 
-        document.write(response.data[i].name + "-" + response.data[i].related-items + "<br /><br />")
+        document.write(response.data[i].name + "-" + response.data[i].related + "<br /><br />")
     }
     
 
