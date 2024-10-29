@@ -25,7 +25,7 @@ console.log(b)
     //document.getElementById('product-name').textContent = product_name;
 
     for (var i=0; i < response.total; i++){
-        if (response.data[i].related === "L1"){
+        if (response.data[i].related === a){
             document.write(response.data[i].name + " - " + response.data[i].related + "<br /><br />")
         }
     }
