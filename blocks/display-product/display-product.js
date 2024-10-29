@@ -9,12 +9,14 @@ console.log(urlParams.getAll('related-items'))
   .then(response => response.json())
   .then(data => {
     
-    const name = data[0].name;
+    console.log(data);
+
+    const name = data[0][name];
    
     // Display title
     document.getElementById('result-here').textContent = 'Results' ;
 
-    console.log(data);
+
 
     //Display the last trade date
     document.getElementById('product-name').textContent = name;
