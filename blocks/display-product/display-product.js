@@ -9,7 +9,7 @@ console.log(urlParams.getAll('related-items'))
   .then(response => response.json())
   .then(data => {
     
-    const tradeDate = data['Global Quote']['07. latest trading day'];
+    //const tradeDate = data['Global Quote']['07. latest trading day'];
    
     // Display title
     document.getElementById('result-here').textContent = 'Stock Price Information (dynamically generated): ' ;
