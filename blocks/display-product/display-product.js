@@ -25,7 +25,7 @@ fetch('https://main--cabotstain--deckreyes.aem.page/deck.json?sheet=products')
 
     for (var i=0; i < response.total; i++){
         if (response.data[i].related === x){
-            document.write(response.data[i].name + " - " + response.data[i].related + "<br /><br />")
+            document.write(response.data[i].name + "<br /><br />")
         }
     }
     
