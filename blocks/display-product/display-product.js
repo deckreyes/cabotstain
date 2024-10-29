@@ -4,6 +4,9 @@ const urlParams = new URLSearchParams(queryString);
 console.log(urlParams.getAll('related-items'))
 
 const related_items = urlParams.getAll('related-items');
+let [x, y] = related_items;
+console.log(x)
+
 
 fetch('https://main--cabotstain--deckreyes.aem.page/deck.json?sheet=products')
   .then(response => response.json())
