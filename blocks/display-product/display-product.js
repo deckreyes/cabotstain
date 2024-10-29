@@ -12,15 +12,14 @@ console.log(urlParams.getAll('related-items'))
     console.log(response);
 
     //const product_name = response.data[0].name;
-    const product_name = response.data[0].name;
+   
    
     // Display title
     document.getElementById('result-here').textContent = 'Results' ;
 
-
-
+    response.data.find( record => record.related-items === "L1")
     //Display the last trade date
-    document.getElementById('product-name').textContent = product_name;
+    //document.getElementById('product-name').textContent = product_name;
 
   })
   .catch(error => {
