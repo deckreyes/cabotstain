@@ -12,9 +12,10 @@ console.log(urlParams.getAll('related-items'))
     //const tradeDate = data['Global Quote']['07. latest trading day'];
    
     // Display title
-    document.getElementById('result-here').textContent = 'Stock Price Information (dynamically generated): ' ;
+    document.getElementById('result-here').textContent = 'Results' ;
 
-   
+    console.log(data);
+
     // Display the last trade date
     //document.getElementById('trade-date').textContent = 'Trade Date: ' + tradeDate;
 
