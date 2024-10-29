@@ -4,9 +4,6 @@ const urlParams = new URLSearchParams(queryString);
 console.log(urlParams.getAll('related-items'))
 
 const related_items = urlParams.getAll('related-items');
-var one = related_items[0]
-var two = related_items[1]
-console.log(two)
 
 
   fetch('https://main--cabotstain--deckreyes.aem.page/deck.json?sheet=products&related-items=L1&L2')
@@ -25,7 +22,7 @@ console.log(two)
     //document.getElementById('product-name').textContent = product_name;
 
     for (var i=0; i < response.total; i++){
-        if (response.data[i].related === "L1"){
+        if (response.data[i].related === "L1" | "L2"){
             document.write(response.data[i].name + "-" + response.data[i].related + "<br /><br />")
         }
     }
