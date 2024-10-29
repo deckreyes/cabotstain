@@ -21,8 +21,9 @@ console.log(urlParams.getAll('related-items'))
     //document.getElementById('product-name').textContent = product_name;
 
     for (var i=0; i < response.total; i++){
-
-        document.write(response.data[i].name + "-" + response.data[i].related + "<br /><br />")
+        if (response.data[i].related === "L1"){
+            document.write(response.data[i].name + "-" + response.data[i].related + "<br /><br />")
+        }
     }
     
 
