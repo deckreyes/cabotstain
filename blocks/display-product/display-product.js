@@ -17,7 +17,7 @@ console.log(urlParams.getAll('related-items'))
     // Display title
     document.getElementById('result-here').textContent = 'Results' ;
 
-    var slag = JSON.parse(response).filter(doc => doc.related-items === 'test');
+    var slag = response.filter(doc => doc.related-items === 'test');
     console.log(slag);
 
 
