@@ -20,7 +20,10 @@ console.log(urlParams.getAll('related-items'))
     //Display the last trade date
     //document.getElementById('product-name').textContent = product_name;
 
-    console.log(response.total)
+    for (var i=0; i < response.total; i++{
+
+        console.log(response.data[i].name)
+    }
     
 
   })
