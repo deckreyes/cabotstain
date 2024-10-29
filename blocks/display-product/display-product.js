@@ -26,7 +26,6 @@ fetch('https://main--cabotstain--deckreyes.aem.page/deck.json?sheet=products&rel
         }
     }
     
-    console.log(a)
 
   })
   .catch(error => {
