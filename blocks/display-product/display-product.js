@@ -6,10 +6,8 @@ console.log(urlParams.getAll('related-items'))
 const related_items = urlParams.getAll('related-items');
 const [a, b] =[...related_items];
 console.log(a)
-console.log(b)
 
-
-  fetch('https://main--cabotstain--deckreyes.aem.page/deck.json?sheet=products&related-items=L1&L2')
+fetch('https://main--cabotstain--deckreyes.aem.page/deck.json?sheet=products&related-items=L1&L2')
   .then(response => response.json())
   .then(response => {
     
@@ -30,6 +28,7 @@ console.log(b)
         }
     }
     
+    console.log(a)
 
   })
   .catch(error => {
