@@ -17,7 +17,7 @@ console.log(urlParams.getAll('related-items'))
     // Display title
     document.getElementById('result-here').textContent = 'Results' ;
 
-    response.data.find( record => record.related-items === "L1")
+    response.data.find( record => record.sale === "TRUE")
     //Display the last trade date
     //document.getElementById('product-name').textContent = product_name;
 
