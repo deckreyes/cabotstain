@@ -11,7 +11,8 @@ console.log(urlParams.getAll('related-items'))
     
     console.log(response);
 
-    const product_name = response.data[0].name;
+    //const product_name = response.data[0].name;
+    const product_name = response.data.related-items[L1, L2];
    
     // Display title
     document.getElementById('result-here').textContent = 'Results' ;
