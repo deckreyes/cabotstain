@@ -123,16 +123,16 @@ export default async function decorate(block) {
             <div class="slider-image">
               <div class="image-wrapper">${optimizedImage.outerHTML}</div>
             </div>
-            <div class="slider-text"><strong>${item.name}</strong> ${item.description}</div>
+            <div class="slider-text"><strong>${item.name}</strong><br /><br /> ${item.description}</div>
 
             ${item.sale.toLowerCase() === 'true' 
               ? 
               `<div class="price sale">
-                $${item.price}
+                ${item.price}
                 <span>Sale</span>
               </div>`
               : 
-              `<div class="price">$${item.price}</div>`
+              `<div class="price">${item.price}</div>`
             }
 
           </a>
