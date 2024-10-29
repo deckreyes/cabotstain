@@ -3,7 +3,7 @@ const urlParams = new URLSearchParams(queryString);
 
 console.log(urlParams.getAll('related-items'))
 
-const related_items = urlParams.getAll('related-items');
+let related_items = urlParams.getAll('related-items');
 [a,b] = related_items;
 console.log(a)
 console.log(b)
