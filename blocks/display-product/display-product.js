@@ -24,10 +24,10 @@ fetch('https://main--cabotstain--deckreyes.aem.page/deck.json?sheet=products-new
     //document.getElementById('product-name').textContent = product_name;
 
     for (var i=0; i < response.total; i++){
-        if (response.data[i].related === x){
+        //if (response.data[i].related === x){
             //document.write(response.data[i].name + "<br /><br />")
             document.getElementById('product-name').textContent = response.data[i].name + "<br /><br />"
-        }
+        //}
     }
     
 
