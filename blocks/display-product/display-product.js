@@ -1,9 +1,7 @@
 const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
 
-console.log(urlParams.getAll('l2'))
-
-const related_item = urlParams.getAll('l2');
+const related_item = urlParams.get('l2');
 let x = related_item;
 console.log(x)
 
