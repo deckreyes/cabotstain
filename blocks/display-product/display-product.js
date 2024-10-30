@@ -8,7 +8,7 @@ let [x, y] = related_items;
 console.log(x)
 
 
-fetch('https://main--cabotstain--deckreyes.aem.page/deck.json?sheet=products')
+fetch('https://main--cabotstain--deckreyes.aem.page/deck.json?sheet=products-new')
   .then(response => response.json())
   .then(response => {
     
@@ -23,11 +23,7 @@ fetch('https://main--cabotstain--deckreyes.aem.page/deck.json?sheet=products')
     //Display the last trade date
     //document.getElementById('product-name').textContent = product_name;
 
-    for (var i=0; i < response.total; i++){
-        if (response.data[i].related === x){
-            document.write(response.data[i].name + "<br /><br />")
-        }
-    }
+
     
 
   })
