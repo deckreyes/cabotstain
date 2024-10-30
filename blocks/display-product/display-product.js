@@ -25,7 +25,7 @@ fetch('https://main--cabotstain--deckreyes.aem.page/deck.json?sheet=products-new
         if (response.data[i].l2 === x){
             //document.write(response.data[i].name + "<br /><br />")
             document.getElementById('product-name').innerHTML += "<br />"
-            document.getElementById('product-name').innerHTML += "<img loading=\"eager\"  src=\"/images/cabot-solid-color-acrylic-stain-sealer.jpg?width=200&amp;format=jpg&amp;optimize=medium\" width=\"200\" height=\"200\">"
+            document.getElementById('product-name').innerHTML += "<img loading=\"eager\"  src=\"" + response.data[i].image + "?width=200&amp;format=jpg&amp;optimize=medium\" width=\"200\" height=\"200\">"
             document.getElementById('product-name').innerHTML += response.data[i].name
             document.getElementById('product-name').innerHTML += "<br />"
         }
