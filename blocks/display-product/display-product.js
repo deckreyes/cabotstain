@@ -1,10 +1,10 @@
 const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
 
-console.log(urlParams.getAll('related-items'))
+console.log(urlParams.getAll('l2'))
 
-const related_items = urlParams.getAll('related-items');
-let [x, y] = related_items;
+const related_item = urlParams.getAll('l2');
+let x = related_item;
 console.log(x)
 
 
