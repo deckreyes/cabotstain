@@ -8,7 +8,10 @@ fetch('https://main--cabotstain--deckreyes.aem.page/deck.json?sheet=wood')
     //const product_name = response.data[0].name;
   
 
-           document.getElementById(woodtext1).textContent  = "Hello World"
+           document.getElementById(woodtext1).textContent  = response.data[0].name
+
+    console.log(response.data[0].name)
+
           
   }
   )
