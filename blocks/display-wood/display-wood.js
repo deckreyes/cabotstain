@@ -9,7 +9,7 @@ fetch('https://main--cabotstain--deckreyes.aem.page/deck.json?sheet=wood')
   
 
            document.getElementById('woodtext1').textContent  = response.data[0].name
-
+           document.getElementById('woodtext2').textContent  = response.data[1].name
    
 
           
