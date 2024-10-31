@@ -10,7 +10,7 @@ fetch('https://main--cabotstain--deckreyes.aem.page/deck.json?sheet=wood')
 
            document.getElementById(woodtext1).textContent  = response.data[0].name
 
-    console.log('hello world first')
+    console.log('hello world first');
 
           
   }
