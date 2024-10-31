@@ -34,5 +34,5 @@ fetch('https://main--cabotstain--deckreyes.aem.page/deck.json?sheet=products-new
 
   })
   .catch(error => {
-    console.log('Error fetching stock price:', error);
+    console.log('Error fetching products', error);
   });
