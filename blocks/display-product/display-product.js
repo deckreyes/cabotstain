@@ -5,6 +5,8 @@ const look = urlParams.get('look');
 const condition = urlParams.get('condition');
 const project = urlParams.get('project');
 
+console.log(look)
+
 
 fetch('https://main--cabotstain--deckreyes.aem.page/deck.json?sheet=products-matrix')
   .then(response => response.json())
