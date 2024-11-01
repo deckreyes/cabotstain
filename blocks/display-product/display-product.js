@@ -28,6 +28,7 @@ fetch('https://main--cabotstain--deckreyes.aem.page/deck.json?sheet=products-mat
           document.getElementById('product-name').innerHTML += "<br />"
       } else {
            document.getElementById('product-name').innerHTML += "Sorry, did not compute, try again please"
+           break;
       }
   }
     
