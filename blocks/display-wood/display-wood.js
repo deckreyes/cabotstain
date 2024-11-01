@@ -1,4 +1,4 @@
-document.getElementById('select').innerHTML  = "<select name=\"woods\" id=\"woods\" multiple>"
+
 
 fetch('https://main--cabotstain--deckreyes.aem.page/deck.json?sheet=wood')
   .then(response => response.json())
