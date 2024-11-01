@@ -19,7 +19,7 @@ fetch('https://main--cabotstain--deckreyes.aem.page/deck.json?sheet=products-mat
     //document.getElementById('product-name').textContent = product_name;
 
     for (var i=0; i < response.total; i++){
-      if (response.data[i].look === 'clear'){
+      if (response.data[i].look === look){
           //document.write(response.data[i].name + "<br /><br />")
           document.getElementById('product-name').innerHTML += "<br />"
           document.getElementById('product-name').innerHTML += "<img loading=\"eager\"  src=\"" + response.data[i].image + "?width=200&amp;format=jpg&amp;optimize=medium\" width=\"200\" height=\"200\">"
