@@ -8,7 +8,7 @@ const project = urlParams.get('project');
 console.log(look)
 
 
-fetch('https://main--cabotstain--deckreyes.aem.page/deck.json?sheet=products-master')
+fetch('https://main--cabotstain--deckreyes.aem.page/deck.json?sheet=master')
   .then(response => response.json())
   .then(response => {
     
