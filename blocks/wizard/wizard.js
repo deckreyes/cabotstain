@@ -3,6 +3,7 @@ const urlParams = new URLSearchParams(queryString);
 
 const brand = urlParams.get('brand');
 const type = urlParams.get('type');
+console.log(brand)
 
 fetch('https://main--cabotstain--deckreyes.aem.page/deck.json?sheet=master')
   .then(response => response.json())
@@ -21,7 +22,9 @@ fetch('https://main--cabotstain--deckreyes.aem.page/deck.json?sheet=master')
       if (response.data[i].brand === 'cabot' && response.data[i].type === 'surface'){          
           document.getElementById('surface-type-here').innerHTML += "<br />"
           document.getElementById('surface-type-here').innerHTML += "<img loading=\"eager\"  src=\"" + response.data[i].image + "?width=200&amp;format=jpg&amp;optimize=medium\" width=\"200\" height=\"200\">"
+          document.getElementById('surface-type-here').innerHTML += "<a href=\"wizard?\">"
           document.getElementById('surface-type-here').innerHTML += response.data[i].name
+           document.getElementById('surface-type-here').innerHTML += "</a>"
           document.getElementById('surface-type-here').innerHTML += "<br />"
       } 
      }  
