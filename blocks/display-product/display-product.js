@@ -28,19 +28,37 @@ fetch('https://main--cabotstain--deckreyes.aem.page/deck.json?sheet=products-mat
         document.getElementById('product-name').innerHTML += response.data[i].name
         document.getElementById('product-name').innerHTML += "<br />"
     } 
-    if (response.data[i].look === 'woodTone' && response.data[i].condition === ''){          
+    if (response.data[i].look === 'woodTone'){          
       document.getElementById('product-name').innerHTML += "<br />"
       document.getElementById('product-name').innerHTML += "<img loading=\"eager\"  src=\"" + response.data[i].image + "?width=200&amp;format=jpg&amp;optimize=medium\" width=\"200\" height=\"200\">"
       document.getElementById('product-name').innerHTML += response.data[i].name
       document.getElementById('product-name').innerHTML += "<br />"
     } 
-      if (response.data[i].look === look && response.data[i].condition === condition && response.data[i].project === project){          
-          document.getElementById('product-name').innerHTML += "<br />"
-          document.getElementById('product-name').innerHTML += "<img loading=\"eager\"  src=\"" + response.data[i].image + "?width=200&amp;format=jpg&amp;optimize=medium\" width=\"200\" height=\"200\">"
-          document.getElementById('product-name').innerHTML += response.data[i].name
-          document.getElementById('product-name').innerHTML += "<br />"
-      } 
-     }  
+    if (response.data[i].look === 'woodTone' && response.data[i].condition === 'clearCoat'){          
+      document.getElementById('product-name').innerHTML += "<br />"
+      document.getElementById('product-name').innerHTML += "<img loading=\"eager\"  src=\"" + response.data[i].image + "?width=200&amp;format=jpg&amp;optimize=medium\" width=\"200\" height=\"200\">"
+      document.getElementById('product-name').innerHTML += response.data[i].name
+      document.getElementById('product-name').innerHTML += "<br />"
+    } 
+    if (response.data[i].look === 'woodTone' && response.data[i].condition === 'new'){          
+      document.getElementById('product-name').innerHTML += "<br />"
+      document.getElementById('product-name').innerHTML += "<img loading=\"eager\"  src=\"" + response.data[i].image + "?width=200&amp;format=jpg&amp;optimize=medium\" width=\"200\" height=\"200\">"
+      document.getElementById('product-name').innerHTML += response.data[i].name
+      document.getElementById('product-name').innerHTML += "<br />"
+    } 
+    if (response.data[i].look === 'semiTransparent'){          
+      document.getElementById('product-name').innerHTML += "<br />"
+      document.getElementById('product-name').innerHTML += "<img loading=\"eager\"  src=\"" + response.data[i].image + "?width=200&amp;format=jpg&amp;optimize=medium\" width=\"200\" height=\"200\">"
+      document.getElementById('product-name').innerHTML += response.data[i].name
+      document.getElementById('product-name').innerHTML += "<br />"
+    } 
+    if (response.data[i].look === look && response.data[i].condition === condition && response.data[i].project === project){          
+      document.getElementById('product-name').innerHTML += "<br />"
+      document.getElementById('product-name').innerHTML += "<img loading=\"eager\"  src=\"" + response.data[i].image + "?width=200&amp;format=jpg&amp;optimize=medium\" width=\"200\" height=\"200\">"
+      document.getElementById('product-name').innerHTML += response.data[i].name
+      document.getElementById('product-name').innerHTML += "<br />"
+    } 
+   }  
 
   })
   .catch(error => {
