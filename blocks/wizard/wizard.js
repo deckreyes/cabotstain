@@ -59,7 +59,7 @@ fetch('https://main--cabotstain--deckreyes.aem.page/deck.json?sheet=master')
       if (response.data[i].brand === brand && response.data[i].type === type && step === 'four'){          
         document.getElementById('surface-type-here').innerHTML += "<br />"
         document.getElementById('surface-type-here').innerHTML += "<img loading=\"eager\"  src=\"" + response.data[i].image + "?width=200&amp;format=jpg&amp;optimize=medium\" width=\"200\" height=\"200\">"
-        document.getElementById('surface-type-here').innerHTML += "<a href=\"display-product?look=" + response.data[i].id + "&condition=" + condition + "&project=" + project + "&step=five\">" + response.data[i].name + "</a>"
+        document.getElementById('surface-type-here').innerHTML += "<a href=\"display-product?look=" + response.data[i].id + "&condition=" + condition + "&project=" + project + "\">" + response.data[i].name + "</a>"
         document.getElementById('surface-type-here').innerHTML += "<br />"
       }     
     }  
