@@ -32,9 +32,7 @@ fetch('https://main--cabotstain--deckreyes.aem.page/deck.json?sheet=master')
     if (step === 'four'){
       document.getElementById('header-here').textContent = '4. What is the look you want?' ;
       }
-    if (step === 'five'){
-      document.getElementById('header-here').textContent = '5. Results' ;
-      }
+   
 
     //Display the last trade date
     //document.getElementById('product-name').textContent = product_name;
@@ -61,15 +59,9 @@ fetch('https://main--cabotstain--deckreyes.aem.page/deck.json?sheet=master')
       if (response.data[i].brand === brand && response.data[i].type === type && step === 'four'){          
         document.getElementById('surface-type-here').innerHTML += "<br />"
         document.getElementById('surface-type-here').innerHTML += "<img loading=\"eager\"  src=\"" + response.data[i].image + "?width=200&amp;format=jpg&amp;optimize=medium\" width=\"200\" height=\"200\">"
-        document.getElementById('surface-type-here').innerHTML += "<a href=\"wizard?brand=cabot&type=product&look=" + response.data[i].id + "&condition=" + condition + "&project=" + project + "&step=five\">" + response.data[i].name + "</a>"
+        document.getElementById('surface-type-here').innerHTML += "<a href=\"display-products?look=" + response.data[i].id + "&condition=" + condition + "&project=" + project + "&step=five\">" + response.data[i].name + "</a>"
         document.getElementById('surface-type-here').innerHTML += "<br />"
-      } 
-      if (response.data[i].brand === brand && response.data[i].type === type && look === look && step === 'five'){          
-        document.getElementById('surface-type-here').innerHTML += "<br />"
-        document.getElementById('surface-type-here').innerHTML += "<img loading=\"eager\"  src=\"" + response.data[i].image + "?width=200&amp;format=jpg&amp;optimize=medium\" width=\"200\" height=\"200\">"
-        document.getElementById('surface-type-here').innerHTML += "<a href=\"display-product?look=" + response.data[i].id + "&condition=" + condition + "&project=" + project + "\">" + response.data[i].name + "</a>"
-        document.getElementById('surface-type-here').innerHTML += "<br />"
-      } 
+      }     
     }  
 
   })
