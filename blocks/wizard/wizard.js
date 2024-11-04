@@ -19,10 +19,10 @@ fetch('https://main--cabotstain--deckreyes.aem.page/deck.json?sheet=master')
 
     for (var i=0; i < response.total; i++){
       if (response.data[i].brand === 'cabot' && response.data[i].type === 'surface'){          
-          document.getElementById('surface-type-here').innerHTML += "<br />"
-          document.getElementById('surface-type-here').innerHTML += "<img loading=\"eager\"  src=\"" + response.data[i].image + "?width=200&amp;format=jpg&amp;optimize=medium\" width=\"200\" height=\"200\">"
-          document.getElementById('surface-type-here').innerHTML += response.data[i].name
-          document.getElementById('surface-type-here').innerHTML += "<br />"
+          document.getElementById('surface-type-here').textContent += "<br />"
+          document.getElementById('surface-type-here').textContent += "<img loading=\"eager\"  src=\"" + response.data[i].image + "?width=200&amp;format=jpg&amp;optimize=medium\" width=\"200\" height=\"200\">"
+          document.getElementById('surface-type-here').textContent += response.data[i].name
+          document.getElementById('surface-type-here').textContent += "<br />"
       } 
      }  
 
