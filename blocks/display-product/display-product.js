@@ -28,6 +28,12 @@ fetch('https://main--cabotstain--deckreyes.aem.page/deck.json?sheet=products-mat
         document.getElementById('product-name').innerHTML += response.data[i].name
         document.getElementById('product-name').innerHTML += "<br />"
     } 
+    if (response.data[i].look == 'woodTone'){          
+      document.getElementById('product-name').innerHTML += "<br />"
+      document.getElementById('product-name').innerHTML += "<img loading=\"eager\"  src=\"" + response.data[i].image + "?width=200&amp;format=jpg&amp;optimize=medium\" width=\"200\" height=\"200\">"
+      document.getElementById('product-name').innerHTML += response.data[i].name
+      document.getElementById('product-name').innerHTML += "<br />"
+  } 
    
    }  
 
