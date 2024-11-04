@@ -8,11 +8,6 @@ const project = urlParams.get('project');
 const condition = urlParams.get('condition');
 const look = urlParams.get('look');
 
-function look(){
-  if (look === 'toner' || look === 'colorGrain'){look === '';}
-}
-
-
 
 fetch('https://main--cabotstain--deckreyes.aem.page/deck.json?sheet=master')
   .then(response => response.json())
