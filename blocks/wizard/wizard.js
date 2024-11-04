@@ -3,7 +3,8 @@ const urlParams = new URLSearchParams(queryString);
 
 const brand = urlParams.get('brand');
 const type = urlParams.get('type');
-console.log(brand)
+const step = urlParams.get('step');
+
 
 fetch('https://main--cabotstain--deckreyes.aem.page/deck.json?sheet=master')
   .then(response => response.json())
@@ -13,7 +14,13 @@ fetch('https://main--cabotstain--deckreyes.aem.page/deck.json?sheet=master')
 
     //const product_name = response.data[0].name;   
     // Display title
-    document.getElementById('header-here').textContent = '1. What exterior wood surface are you staining?' ;
+    if (step === 'one'){
+      document.getElementById('header-here').textContent = '1. What exterior wood surface are you staining?' ;
+    }
+
+    if (step === 'two'){
+    document.getElementById('header-here').textContent = '2. What does your project look like?' ;
+    }
 
     //Display the last trade date
     //document.getElementById('product-name').textContent = product_name;
@@ -22,7 +29,7 @@ fetch('https://main--cabotstain--deckreyes.aem.page/deck.json?sheet=master')
       if (response.data[i].brand === brand && response.data[i].type === type){          
           document.getElementById('surface-type-here').innerHTML += "<br />"
           document.getElementById('surface-type-here').innerHTML += "<img loading=\"eager\"  src=\"" + response.data[i].image + "?width=200&amp;format=jpg&amp;optimize=medium\" width=\"200\" height=\"200\">"
-          document.getElementById('surface-type-here').innerHTML += "<a href=\"wizard?brand=cabot&type=condition&surface=" + response.data[i].id + "\">" + response.data[i].name + "</a>"
+          document.getElementById('surface-type-here').innerHTML += "<a href=\"wizard?brand=cabot&type=condition&id=" + response.data[i].id + "&step=two\">" + response.data[i].name + "</a>"
           document.getElementById('surface-type-here').innerHTML += "<br />"
       } 
      }  
