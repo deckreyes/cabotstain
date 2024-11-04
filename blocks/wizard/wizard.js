@@ -1,8 +1,8 @@
 const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
 
-const look = urlParams.get('brand');
-const condition = urlParams.get('surface');
+const brand = urlParams.get('brand');
+const type = urlParams.get('type');
 
 fetch('https://main--cabotstain--deckreyes.aem.page/deck.json?sheet=master')
   .then(response => response.json())
