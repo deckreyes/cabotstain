@@ -25,6 +25,10 @@ fetch('https://main--cabotstain--deckreyes.aem.page/deck.json?sheet=master')
     if (step === 'three'){
       document.getElementById('header-here').textContent = '3. My wood has?' ;
       }
+    
+    if (step === 'four'){
+      document.getElementById('header-here').textContent = '4. What is the look you want?' ;
+      }
 
     //Display the last trade date
     //document.getElementById('product-name').textContent = product_name;
@@ -46,6 +50,12 @@ fetch('https://main--cabotstain--deckreyes.aem.page/deck.json?sheet=master')
         document.getElementById('surface-type-here').innerHTML += "<br />"
         document.getElementById('surface-type-here').innerHTML += "<img loading=\"eager\"  src=\"" + response.data[i].image + "?width=200&amp;format=jpg&amp;optimize=medium\" width=\"200\" height=\"200\">"
         document.getElementById('surface-type-here').innerHTML += "<a href=\"wizard?brand=cabot&type=look&id=" + response.data[i].id + "&step=four\">" + response.data[i].name + "</a>"
+        document.getElementById('surface-type-here').innerHTML += "<br />"
+      } 
+      if (response.data[i].brand === brand && response.data[i].type === type && step === 'four'){          
+        document.getElementById('surface-type-here').innerHTML += "<br />"
+        document.getElementById('surface-type-here').innerHTML += "<img loading=\"eager\"  src=\"" + response.data[i].image + "?width=200&amp;format=jpg&amp;optimize=medium\" width=\"200\" height=\"200\">"
+        document.getElementById('surface-type-here').innerHTML += "<a href=\"display-product?look=" + response.data[i].id + "&condition=" + response.data[i].condition + "&project=" + response.data[i].surface + "\">" + response.data[i].name + "</a>"
         document.getElementById('surface-type-here').innerHTML += "<br />"
       } 
     }  
