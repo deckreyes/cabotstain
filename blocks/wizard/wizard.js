@@ -26,12 +26,18 @@ fetch('https://main--cabotstain--deckreyes.aem.page/deck.json?sheet=master')
     //document.getElementById('product-name').textContent = product_name;
 
     for (var i=0; i < response.total; i++){
-      if (response.data[i].brand === brand && response.data[i].type === type){          
+      if (response.data[i].brand === brand && response.data[i].type === type && step === 'one'){          
           document.getElementById('surface-type-here').innerHTML += "<br />"
           document.getElementById('surface-type-here').innerHTML += "<img loading=\"eager\"  src=\"" + response.data[i].image + "?width=200&amp;format=jpg&amp;optimize=medium\" width=\"200\" height=\"200\">"
           document.getElementById('surface-type-here').innerHTML += "<a href=\"wizard?brand=cabot&type=condition&id=" + response.data[i].id + "&step=two\">" + response.data[i].name + "</a>"
           document.getElementById('surface-type-here').innerHTML += "<br />"
       } 
+      if (response.data[i].brand === brand && response.data[i].type === type && step === 'two'){          
+        document.getElementById('surface-type-here').innerHTML += "<br />"
+        document.getElementById('surface-type-here').innerHTML += "<img loading=\"eager\"  src=\"" + response.data[i].image + "?width=200&amp;format=jpg&amp;optimize=medium\" width=\"200\" height=\"200\">"
+        document.getElementById('surface-type-here').innerHTML += "<a href=\"wizard?brand=cabot&type=condition&id=" + response.data[i].id + "&step=two\">" + response.data[i].name + "xxx</a>"
+        document.getElementById('surface-type-here').innerHTML += "<br />"
+    } 
      }  
 
   })
